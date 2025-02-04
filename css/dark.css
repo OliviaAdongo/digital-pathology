@@ -1,0 +1,267 @@
+/* Basic Body Styling */
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  /* Styling for Quick Links */
+  .quick-link {
+    color: #212529; /* Light mode color */
+    transition: color 0.3s;
+  }
+  
+  .dark-mode .quick-link {
+    color: #f8f9fa; /* Dark mode color */
+  }
+  
+  /* Navbar Styling */
+  .navbar-light .navbar-nav .nav-link {
+    color: #212529;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #FFD700; /* Gold color on hover */
+  }
+  
+  .dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #f8f9fa;
+  }
+  
+  .dark-mode .navbar-light .navbar-nav .nav-link:hover {
+    color: #FFD700;
+  }
+  
+  /* Navbar adjustments for proper spacing */
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Space between the navbar items */
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 0 10px;
+  }
+  
+  /* Dropdown adjustments */
+  .nav-item.dropdown .dropdown-menu {
+    min-width: 160px; /* Ensure the dropdown has sufficient width */
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1; /* Show the dropdown menu on hover */
+  }
+  
+  .nav-item .nav-link {
+    font-size: 1rem; /* Adjust text size for better readability */
+  }
+  
+  .nav-item.dropdown .dropdown-toggle::after {
+    margin-left: 5px; /* Space between the text and the dropdown arrow */
+  }
+  
+  /* Mode toggle icon position */
+  .mode-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-left: 10px; /* Ensure icon is not too close to the other elements */
+  }
+  
+  /* Hero Section with Carousel */
+  .carousel-inner img {
+    width: 100%;
+    height: 600px; /* Standardized height for all images */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+  }
+  
+  /* Carousel Caption */
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to text for better readability */
+  }
+  
+  /* Customizing the Next and Previous buttons */
+  .carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 5;
+  }
+  
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+    transform: scale(1.1); /* Button grows slightly on hover */
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent;
+    width: 30px; /* Adjusted size for arrow icons */
+    height: 30px;
+    font-size: 2rem; /* Larger arrow icon */
+  }
+  
+  .carousel-control-prev-icon {
+    content: "\2190"; /* Left arrow (←) */
+    color: white;
+  }
+  
+  .carousel-control-next-icon {
+    content: "\2192"; /* Right arrow (→) */
+    color: white;
+  }
+  
+  /* Adding opacity to make text visible above the carousel */
+  .carousel-item {
+    position: relative;
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    opacity: 1; /* Buttons should be fully visible */
+  }
+  
+  /* Additional Custom Styling */
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Section Styling */
+  .section-content {
+    margin-top: 50px;
+  }
+  
+  .section-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .section-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .dark-mode footer a {
+    color: #f8f9fa; /* Links color in dark mode */
+  }
+  
+  .dark-mode footer a:hover {
+    color: #FFD700; /* Highlight color for links on hover */
+  }
+  
+  .navbar {
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand img {
+    height: 80px;
+    margin-right: 20px; /* Add space between the logo and the navbar items */
+  }
+  
+/* Sun Icon (for light mode) */
+.fa-sun {
+    color: #FFD700; /* Yellow color for the sun icon */
+  }
+  
+  /* Mode Toggle (overall styling for moon and sun icons) */
+  .mode-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-left: 10px; /* Ensure icon is not too close to the other elements */
+  }
+  
+  .service-box {
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 123, 255, 0.2);
+  }
+  
+  .service-box i {
+    color: #007bff;
+  }
+  
+  #languages .col-md-3 {
+    margin-bottom: 30px;
+  }
+  
+  #languages i {
+    color: #007bff;
+  }
+  
+  #services .service-box {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  #services .service-box:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  #services .service-box:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  #services .service-box:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  #services .service-box:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
