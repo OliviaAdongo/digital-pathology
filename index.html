@@ -24,12 +24,23 @@
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo/2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/2.png">
     <link rel="manifest" href="site.webmanifest">
 
 </head>
+<style>
+    .dark-mode {
+    background-color: #121212;
+    color: white;
+}
 
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+</style>
 
 <body id="top">
 
@@ -59,7 +70,7 @@
                 <div class="s-header__block">
                     <div class="s-header__logo">
                         <a class="logo" href="index.html">
-                            <img src="images/logo.svg" alt="Homepage">
+                            <img src="images/logo/2.png" alt="Homepage" height="150">
                         </a>
                     </div>
 
@@ -74,6 +85,7 @@
                         
                         <li><a href="contact.html">Contact</a></li>
                     </ul> <!-- s-header__menu-links -->
+                 
 
                     <div class="s-header__contact">
                         <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
@@ -209,7 +221,7 @@ histopathology diagnostic skills.
 
                 <div class="row s-expertise__content width-sixteen-col">
                     <div class="column xl-12 grid-block grid-section-split">
-
+                        <button id="theme-toggle">Toggle Theme</button>
                         <div class="section-header grid-section-split__header">
                             <div class="text-pretitle">Expertise</div>                           
                             <h2 class="text-display-title">
@@ -549,6 +561,7 @@ With extensive experience in pathology, I specialize in disease diagnosis, labor
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
 
 </body>
 
