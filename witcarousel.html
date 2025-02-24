@@ -5,149 +5,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiper Intro Section</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <style>
-        :root {
-            --theme-color: #97b34a; /* Olive Green */
-            --button-color: #e98e10; /* Button Color */
-        }
-        body {
-            background-color: #212722;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .s-intro {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            background: #212722;
-            padding: 50px 0;
-        }
-        .swiper-container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .swiper-slide {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-align: left;
-            padding: 40px 20px;
-            height: 80vh;
-            box-sizing: border-box;
-        }
-        .s-intro__content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            gap: 30px;
-            box-sizing: border-box;
-        }
-        .s-intro__content-text {
-            flex: 1;
-            max-width: 50%;
-        }
-        .s-intro__content-title {
-            font-size: 2.5rem;
-            color: var(--theme-color);
-            font-weight: bold;
-            margin: 20px 0;
-        }
-        .s-intro__content-pretitle {
-            font-size: 1.2rem;
-            color: #ddd;
-        }
-        .s-intro__content-media img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-        }
-        .swiper-slide-active .s-intro__content-media img {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: var(--button-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-size: 1rem;
-        }
-        .swiper-pagination-bullet {
-            background: var(--theme-color);
-        }
-        .swiper-button-next, .swiper-button-prev {
-            color: var(--theme-color);
-        }
-        @media (max-width: 768px) {
-            .swiper-slide {
-                flex-direction: column;
-                height: auto;
-                text-align: center;
-                gap: 20px;
-                padding: 20px;
-            }
-            .s-intro__content {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            .s-intro__content-text, .s-intro__content-media {
-                max-width: 100%;
-            }
-        }
-    </style>
-    
-     <style>
-        .content-section {
-            background: #2a2e32;
-            padding: 50px 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .content-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            max-width: 1200px;
-            width: 100%;
-        }
-        .content-box {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 30%;
-            text-align: center;
-            margin: 10px;
-        }
-        .content-box h2 {
-            color: #e98e10;
-        }
-        .content-box p {
-            color: #555;
-        }
-        
-        @media (max-width: 768px) {
-            .content-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .content-box {
-                width: 90%;
-            }
-        }
-    </style>
+  <style>
+    /* Root Variables */
+:root {
+    --theme-color: #97b34a; /* Olive Green */
+    --button-color: #e98e10; /* Button Color */
+}
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #212722;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+/* Swiper Section */
+.s-intro {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #212722;
+    padding: 50px 0;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 40px 20px;
+    width: 100%;
+    height: auto;
+    min-height: 90vh; /* Ensures proper spacing */
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.s-intro__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.s-intro__content-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.s-intro__content-title {
+    font-size: 2.5rem;
+    color: var(--theme-color);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.s-intro__content-pretitle {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.s-intro__content-media img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    object-fit: cover;
+}
+
+.swiper-slide-active .s-intro__content-media img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.swiper-pagination-bullet {
+    background: var(--theme-color);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--theme-color);
+}
+
+/* Content Section */
+.content-section {
+    background: #2a2e32;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.content-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+}
+
+.content-box h2 {
+    color: var(--button-color);
+}
+
+.content-box p {
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .swiper-slide {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .s-intro__content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .s-intro__content-text, 
+    .s-intro__content-media {
+        max-width: 100%;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-box {
+        width: 90%;
+    }
+}
+
+  </style>
 </head>
 <body>
     <section id="intro" class="s-intro">
@@ -172,7 +210,8 @@
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
-                    <div class="s-intro__content" style="flex-direction: row-reverse;">
+                    
+                    <div class="s-intro__content">
                         <div class="s-intro__content-text">
                             <div class="s-intro__content-pretitle">Welcome to Our Vision</div>
                             <h1 class="s-intro__content-title">
@@ -188,13 +227,13 @@
                     </div>
                 </div>
                 <!-- Slide 3 -->
-                <div class="swiper-slide">
+               <div class="swiper-slide"> 
                     <div class="s-intro__content">
                         <div class="s-intro__content-text">
                             <div class="s-intro__content-pretitle">Join the Future of Medicine</div>
                             <h1 class="s-intro__content-title">
                                 Innovating Solutions <br>
-                                For a Healthier Tomorrow.
+                                For a Healthier Tomorrow. Lorem ipsum dolor sit amet.
                             </h1>
                             <a href="#" class="btn">Get Started</a>
                         </div>
