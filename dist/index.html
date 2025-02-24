@@ -1,100 +1,184 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Bootstrap Carousel Slider</title>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
 <html lang="en">
 <head>
-  
-  <title>Animated Vertical Carousel</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Pathology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+</head>
+
 <body>
-    <section class="slide-wrapper">
-        <div class="container">
-            <div id="myCarousel" class="carousel slide">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                 </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item item3">
-                        <div class="fill" style=" background-color:#212722">
-                            <div class="inner-content">
-                                <div class="carousel-img">
-                                    <img src="/images/momo-images/Dr. 1-49.jpg" alt="sofa" class="img img-responsive" />
-                                </div>
-                                <div class="carousel-desc">
-
-                                    <h2>Modern Designer Sofa</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                </div>
-                            </div>
-                        </div>
+    <!-- MENU OVERLAY -->
+<div class="overlay overlay-slide-left" id="overlay">
+    <!-- MENU ITEMS -->
+    <nav>
+      <ul>
+        <li id="nav-1" class="slide-out-1 center">
+          <a href="#home" class="center">Home</a>
+        </li>
+        <li id="nav-2" class="slide-out-2 center">
+          <a href="#about" class="center">About</a>
+        </li>
+        <li id="nav-3" class="slide-out-3 center">
+          <a href="#skills" class="center">Skills</a>
+        </li>
+        <li id="nav-4" class="slide-out-4 center">
+          <a href="#projects" class="center">Projects</a>
+        </li>
+        <li id="nav-5" class="slide-out-5 center">
+          <a href="#contact" class="center">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- HAMBURGER MENU -->
+  <div class="hamburger-menu" id="hamburger-menu">
+    <div class="menu-bar1"></div>
+    <div class="menu-bar2"></div>
+    <div class="menu-bar3"></div>
+  </div>
+  <!-- SECTIONS -->
+  <p class="logo">Krishandeep</p>
+  
+  <section id="intro" class="s-intro">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="s-intro__content">
+                    <div class="s-intro__content-text">
+                        <div class="s-intro__content-pretitle">Hello, I'm Maureen Waithaka</div>
+                        <h1 class="s-intro__content-title">
+                            Revolutionizing Pathology <br>
+                            Through Innovation for Accessible, <br>
+                            High-Quality Diagnostics.
+                        </h1>
+                        <a href="#" class="btn">Learn More</a>
                     </div>
-                    <div class="item item2">
-                        <div class="fill" style="background-color:#212722;">
-                            <div class="inner-content">
-                                <div class="carousel-img">
-                                    <img src="/images/momo-images/Dr. 1-49.jpg" alt="white-sofa" class="img img-responsive" />
-                                </div>
-                                <div class="carousel-desc">
-
-                                    <h2>Vintage Style Sofa</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div class="s-intro__content-media"> 
+                        <img src="https://images.unsplash.com/photo-1562789233-495f52b583dd?q=80&w=2768&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                     </div>
-                    <div class="item item1 active">
-                    
-                        <div class="fill" style="background-color:#7fc2f4;">
-                            <div class="inner-content">
-                                <div class="col-md-6">
-
-                                    <div class="carousel-img">
-                                        <img src="/images/momo-images/Dr. 1-49.jpg" alt="sofa" class="img img-responsive" />
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 text-left">
-                                    <div class="carousel-desc">
-
-                                        <h2>Stylish Sofa</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                
+                <div class="s-intro__content">
+                    <div class="s-intro__content-text">
+                        <div class="s-intro__content-pretitle">Welcome to Our Vision</div>
+                        <h1 class="s-intro__content-title">
+                            Transforming Healthcare <br>
+                            With Advanced Technology <br>
+                            And Expertise.
+                        </h1>
+                        <a href="#" class="btn">Discover More</a>
                     </div>
-
+                    <div class="s-intro__content-media"> 
+                        <img src="https://images.unsplash.com/photo-1562789233-495f52b583dd?q=80&w=2768&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+           <div class="swiper-slide"> 
+                <div class="s-intro__content">
+                    <div class="s-intro__content-text">
+                        <div class="s-intro__content-pretitle">Join the Future of Medicine</div>
+                        <h1 class="s-intro__content-title">
+                            Innovating Solutions <br>
+                            For a Healthier Tomorrow. Lorem ipsum dolor sit amet.
+                        </h1>
+                        <a href="#" class="btn">Get Started</a>
+                    </div>
+                    <div class="s-intro__content-media"> 
+                        <img src="https://images.unsplash.com/photo-1562789233-495f52b583dd?q=80&w=2768&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section>
-      
-    </section>
-</body>
-<!-- partial -->
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+  <section id="about" class="center">
+    <h1>Know More Who I am</h1>
+  </section>
+  
+  <section id="skills" class="center">
+    <h1>Here's all the stuff I do</h1>
+  </section>
+  <section id="projects" class="center">
+    <h1>Here's stuff I made recently</h1>
+  </section>
+  <section id="contact" class="center">
+    <h1>Have me make stuff for you</h1>
+  </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+      var swiper = new Swiper('.swiper-container', {
+          loop: true,
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+          autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+          },
+      });
+  </script>
+  <script>
+    const hamburgerMenu = document.querySelector("#hamburger-menu");
+const overlay = document.querySelector("#overlay");
+const nav1 = document.querySelector("#nav-1");
+const nav2 = document.querySelector("#nav-2");
+const nav3 = document.querySelector("#nav-3");
+const nav4 = document.querySelector("#nav-4");
+const nav5 = document.querySelector("#nav-5");
+const navItems = [nav1, nav2, nav3, nav4, nav5];
+
+// Control Navigation Animation
+function navAnimation(val1, val2) {
+  navItems.forEach((nav, i) => {
+    nav.classList.replace(`slide-${val1}-${i + 1}`, `slide-${val2}-${i + 1}`);
+  });
+}
+
+function toggleNav() {
+  // Toggle: Hamburger Open/Close
+  hamburgerMenu.classList.toggle("active");
+
+  //   Toggle: Menu Active
+  overlay.classList.toggle("overlay-active");
+
+  if (overlay.classList.contains("overlay-active")) {
+    // Animate In - Overlay
+    overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
+
+    // Animate In - Nav Items
+    navAnimation("out", "in");
+  } else {
+    // Animate Out - Overlay
+    overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
+
+    // Animate Out - Nav Items
+    navAnimation("in", "out");
+  }
+}
+
+// Events Listeners
+hamburgerMenu.addEventListener("click", toggleNav);
+navItems.forEach((nav) => {
+  nav.addEventListener("click", toggleNav);
+});
+
+  </script>
 </body>
 </html>
