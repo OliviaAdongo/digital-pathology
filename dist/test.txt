@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #212722;
+            color: white;
+        }
+        .section-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .image-scroll {
+            height: 500px;
+            overflow-y: auto;
+        }
+        .image-scroll img {
+            width: 100%;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .image-display img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .row.g-4 {
+                flex-direction: column;
+            }
+            .col-md-3:first-child {
+                order: -1;
+            }
+            .image-scroll {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 section-container">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="p-3">
+                    <h2>Image Gallery</h2>
+                    <p>Browse and select images from the gallery to display in the main view. Click on an image to enlarge it.</p>
+                    <p>Browse and select images from the gallery to display in the main view. Click on an image to enlarge it.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image-display p-2 text-center">
+                    <img id="main-image" src="https://images.unsplash.com/photo-1736710744799-4ba71f73cf73?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Selected Image">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-scroll p-2">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1736710744799-4ba71f73cf73?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sample Image">
+                    <img class="gallery-img" src="https://plus.unsplash.com/premium_photo-1733873099032-591e68a1310b?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Premium Image 1">
+                    <img class="gallery-img" src="https://plus.unsplash.com/premium_photo-1734377986035-f95370e90185?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Premium Image 2">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1465158154535-2ef77cee33f3?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let images = document.querySelectorAll('.gallery-img');
+        let mainImage = document.getElementById('main-image');
+        let currentIndex = 0;
+
+        function autoScrollImages() {
+            mainImage.src = images[currentIndex].src;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(autoScrollImages, 2000);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
