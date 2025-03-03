@@ -364,7 +364,17 @@ body {
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
     object-fit: cover;
 }
+.s-intro__content-media::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  width: 80px;
+  height: 1px;
+  background-color: #c58b40;
+  box-shadow: 0px 10px 0 #c58b40, 0px 20px 0 #c58b40, 0px 30px 0 #c58b40;
 
+}
 .swiper-slide-active .s-intro__content-media img {
     opacity: 1;
     transform: translateY(0);
