@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Dr. Waithaka</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>FAQ - Dr. Waithaka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Serif+Display&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
     <style>
         :root {
             /* Light mode colors (default) */
@@ -46,10 +46,11 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
-            background: var(--container-bg);
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            min-height: 100vh;
             transition: all 0.3s ease;
         }
 
@@ -209,144 +210,190 @@
         /* Main Content */
         .main-content {
             margin-top: 80px;
+            padding: 2rem 1rem;
         }
 
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
-            color: var(--container-bg);
-            padding: 100px 0 80px;
-            text-align: center;
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 400;
-            font-family: 'Playfair Display', Georgia, serif;
-            line-height: 1.2;
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 30px;
-            font-family: 'Playfair Display', Georgia, serif;
-        }
-
-        .section-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .section-text {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-        }
-
-        /* Values Section */
-        .values-section {
-            background: var(--card-bg);
-            padding: 80px 0;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .value-card {
+        /* FAQ Container */
+        .faq-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
             background: var(--container-bg);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px var(--card-shadow);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px var(--card-shadow);
+            overflow: hidden;
             border: 1px solid rgba(233, 142, 16, 0.1);
-            transition: all 0.3s ease;
         }
 
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px var(--card-shadow-hover);
-            border-color: var(--accent-color);
-        }
-
-        .value-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .value-description {
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        /* Work With Me Section */
-        .work-section {
-            padding: 80px 0;
-        }
-
-        /* CTA Section */
-        .cta-section {
+        .faq-header {
             background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
             color: var(--container-bg);
-            padding: 100px 0;
+            padding: 3rem 2rem;
             text-align: center;
         }
 
-        .cta-title {
-            font-size: 3rem;
+        .faq-header h1 {
+            font-family: "DM Serif Display", "Playfair Display", Georgia, serif;
+            font-size: 2.8rem;
             font-weight: 400;
-            margin-bottom: 30px;
-            font-family: 'Playfair Display', Georgia, serif;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        .cta-text {
+        .faq-header p {
             font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 40px;
             opacity: 0.9;
-            line-height: 1.7;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
-        .cta-btn {
-            background: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
+        .faq-container {
+            padding: 2rem;
+        }
+
+        .search-box {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid rgba(233, 142, 16, 0.3);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(233, 142, 16, 0.2);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(233, 142, 16, 0.2);
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 12px var(--card-shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            background: rgba(233, 142, 16, 0.1);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-weight: 500;
             font-size: 1.1rem;
+            color: var(--text-primary);
             transition: all 0.3s ease;
-            display: inline-block;
+            border: none;
+            width: 100%;
+            text-align: left;
         }
 
-        .cta-btn:hover {
-            background: #d17a0a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(233, 142, 16, 0.3);
+        .faq-question:hover {
+            background: rgba(233, 142, 16, 0.2);
+            color: var(--text-secondary);
+        }
+
+        .faq-question.active {
+            background: var(--accent-color);
+            color: var(--container-bg);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            background: var(--container-bg);
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-answer ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer strong {
+            color: var(--accent-color);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-muted);
+            display: none;
+        }
+
+        .no-results.show {
+            display: block;
+        }
+
+        .no-results h3 {
+            font-family: "DM Serif Display", Georgia, serif;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
 
         /* Footer Styles */
@@ -354,7 +401,7 @@
             background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
             color: var(--container-bg);
             padding: 60px 0 30px;
-            margin-top: 0;
+            margin-top: 4rem;
         }
 
         .footer-content {
@@ -479,48 +526,6 @@
             text-decoration: underline;
         }
 
-        /* Newsletter Form */
-        .newsletter-form {
-            margin-top: 20px;
-        }
-
-        .newsletter-input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid rgba(254, 246, 230, 0.3);
-            border-radius: 8px;
-            background: rgba(254, 246, 230, 0.1);
-            color: var(--container-bg);
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .newsletter-input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-
-        .newsletter-input::placeholder {
-            color: var(--text-muted);
-            opacity: 0.7;
-        }
-
-        .newsletter-btn {
-            width: 100%;
-            background: var(--accent-color);
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .newsletter-btn:hover {
-            background: #d17a0a;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .navbar-nav {
@@ -535,22 +540,33 @@
                 display: flex;
             }
 
-            .hero-title {
-                font-size: 2.5rem;
+            .main-content {
+                padding: 1rem 0.5rem;
             }
 
-            .section-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .faq-header {
+                padding: 2rem 1rem;
             }
 
-            .values-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .faq-header h1 {
+                font-size: 2.2rem;
             }
 
-            .cta-title {
-                font-size: 2rem;
+            .faq-header p {
+                font-size: 1rem;
+            }
+
+            .faq-container {
+                padding: 1rem;
+            }
+
+            .faq-question {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .faq-answer.active {
+                padding: 1rem;
             }
 
             .container {
@@ -565,30 +581,20 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 30px;
             }
-
-            .content-section,
-            .values-section,
-            .work-section {
-                padding: 60px 0;
-            }
-
-            .hero-section,
-            .cta-section {
-                padding: 80px 0;
-            }
         }
 
         @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .cta-title {
+            .faq-header h1 {
                 font-size: 1.8rem;
+            }
+
+            .faq-question {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+
+            .faq-answer.active {
+                padding: 0.75rem;
             }
 
             .navbar-logo {
@@ -640,104 +646,143 @@
 
         <div class="mobile-menu" id="mobileMenu">
              <ul class="navbar-nav mobile-nav">
-                 <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="services.html" class="nav-link">My Creative Work</a></li>
                 <li><a href="FAQs.html" class="nav-link">FAQs</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
-                
             </ul>
         </div>
     </nav>
 
     <!-- Main Content -->
     <div class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <p class="hero-subtitle">About</p>
-                <h1 class="hero-title">Hi, I'm Maureen Waithaka</h1>
+        <div class="faq-wrapper">
+            <div class="faq-header">
+                <h1>Digital Pathology FAQs</h1>
+                <p>Find answers to the most common questions about digital pathology technology and implementation</p>
             </div>
-        </section>
+            
+            <div class="faq-container">
+                <div class="search-box">
+                    <div class="search-icon">🔍</div>
+                    <input type="text" class="search-input" placeholder="Search FAQ questions..." id="searchInput">
+                </div>
 
-        <!-- Why Digital Pathology Section -->
-        <section class="content-section">
-            <div class="container">
-                <div class="section-content">
-                    <div>
-                        <h2 class="section-title">Why Digital Pathology?</h2>
-                    </div>
-                    <div class="section-text">
-                        <p>I am a passionate digital pathologist, dedicated to revolutionizing diagnostics through innovation and technology. My mission is to leverage digital pathology to enhance accuracy, accessibility, and efficiency of surgical pathology diagnosis, ensuring better patient outcomes. I am also deeply committed to medical education, through which we can empower the next generation of pathologists and healthcare professionals.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is digital pathology?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Digital pathology is the practice of digitising glass slides (tissue samples) using scanners to convert the glass slides into high resolution digital images. This allows pathologists to view, analyze, and share the images on a computer instead of a microscope.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- How I Got Here Section -->
-        <section class="content-section">
-            <div class="container">
-                <div class="section-content">
-                    <div>
-                        <h2 class="section-title">How I Got Here</h2>
-                    </div>
-                    <div class="section-text">
-                        <p>My journey in medicine began as a medical intern at a hospital in Meru County, Kenya. The work was profoundly meaningful, particularly seeing patients from distant areas receive good quality care at our facility. Unfortunately, this experience also revealed challenges in our healthcare system. Many patients, especially those in underserved communities, have limited access to surgical pathology diagnoses. This type of diagnosis is critical for effective cancer management. We simply don't have enough pathologists to serve our growing populations. Digital pathology offers a powerful solution to bridge these crucial gaps in care.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does a digital pathology scanner work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The scanner takes high resolution images of entire glass slides, stitching together thousands of tiny snapshots to create a whole slide image (WSI) that can be viewed digitally.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Values & Beliefs Section -->
-        <section class="values-section">
-            <div class="container">
-                <h2 class="section-title">My Values & Beliefs</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <h3 class="value-title">Innovation & Precision</h3>
-                        <p class="value-description">I believe in leveraging technology to enhance pathology services, ensuring accurate and timely diagnosis.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3 class="value-title">Accessibility & Impact</h3>
-                        <p class="value-description">Quality pathology should be accessible to all, breaking geographical and economical barriers to improve global healthcare.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3 class="value-title">Education & Mentorship</h3>
-                        <p class="value-description">Knowledge sharing is key to advancing the field of pathology. I am committed to training and mentoring future pathologists.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3 class="value-title">Collaboration & Leadership</h3>
-                        <p class="value-description">Teamwork and cross-disciplinary collaboration drive meaningful change in diagnostics and patient care.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How much storage does a single digital slide need?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A high resolution whole slide image (WSI) can range from 500 MB to 5+ GB, depending on scan quality and tissue size.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Why Work With Me Section -->
-        <section class="work-section">
-            <div class="container">
-                <div class="section-content">
-                    <div>
-                        <h2 class="section-title">Why Work With Me</h2>
-                    </div>
-                    <div class="section-text">
-                        <p>With expertise in both traditional and digital pathology, I bring a unique blend of medical knowledge and technological innovation. My experience spans diagnostics, research, project leadership, and medical education. I have worked with healthcare institutions, digital pathology platforms, and educational organizations to advance patient care and train future professionals.</p>
-                        <br>
-                        <p>By integrating cutting-edge digital pathology solutions, I help streamline workflows, improve diagnostic accuracy, and make pathology services more efficient and accessible. Whether through research, education, or industry collaboration, I am dedicated to transforming pathology for the future.</p>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is digital pathology approved for primary diagnosis?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>In many regions, certain systems are approved for primary diagnosis. Regulations vary from region to region.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <h2 class="cta-title">Get started with a consultation today.</h2>
-                <p class="cta-text">Ensure accurate diagnoses and expert insights with a professional digital pathology consultation. Whether you need diagnostic support, second opinions, or digital pathology solutions, I'm here to help enhance patient care and outcomes.</p>
-                <a href="#contact" class="cta-btn">Let's Work Together</a>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Will pathologists become obsolete, replaced by algorithms and blinking lights?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, it is a tool to enhance efficiency, not replace human expertise. AI assists, but pathologists make the final call.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the benefits of digital pathology over traditional pathology?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>There are a number of benefits including:</p>
+                        <ul>
+                            <li><strong>Facilitating remote access</strong> - Pathologists can review slides from anywhere (with a tablet/computer and internet access), unconfined by having to be present in offices or beat traffic to travel distances between the institutions they serve</li>
+                            <li><strong>Enabling collaboration</strong> - Digital images can easily and securely be shared allowing for multiple experts to view, discuss and collaboratively make diagnoses on the same slide simultaneously</li>
+                            <li><strong>AI integration</strong> - Artificial intelligence algorithms can be developed and integrated to assist in diagnosis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are some challenges facing digital pathology?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>First is <strong>cost</strong>, scanners, software and digital storage are expensive.</p>
+                        <p><strong>Standardisation</strong> also poses a significant challenge, there are currently different scanners and formats which can cause compatibility issues.</p>
+                        <p><strong>Workflow integration</strong> is another challenge. There may be resistance to change from legacy systems as well as the need for pathologists, hospitals and labs to undergo training in order to adopt digital workflow systems.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is digital pathology only for big, fancy hospitals with unlimited budgets?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The beauty of digital pathology lies in its scalability and increasing accessibility. As technology advances and costs decrease, we envision a future where even smaller clinics and remote healthcare providers can leverage these tools. Imagine a patient in a rural community benefiting from a specialist's opinion from thousands of miles away, all thanks to digital pathology. It has the potential to democratise access to expert diagnostics.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What's the difference between digital pathology and computational pathology?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Digital pathology involves digitising glass histology slides while computational pathology involves using AI and software to analyze these digitised slides.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What's the most exciting thing on the horizon for digital pathology that most people don't know about?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The integration of histologic and molecular (also called -omics) data. When a tissue sample is taken from a patient, various tests and investigations are done. Imagine being able to use technology, which can analyze and process vast amounts of data, to combine the visual insights from digital pathology with genomic, proteomic, and metabolomic data from the same tissue sample. This creates a holistic, multi-dimensional view of disease, allowing for incredibly precise diagnoses, personalised treatment plans, and even the development of entirely new therapies.</p>
+                    </div>
+                </div>
+
+                <div class="no-results">
+                    <h3>No matching questions found</h3>
+                    <p>Try adjusting your search terms or browse all questions above.</p>
+                </div>
             </div>
-        </section>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -755,8 +800,8 @@
                             <span class="name">Waithaka</span>
                         </div>
                     </a>
-                    <h3>About Maureen Waithaka</h3>
-                    <p>Maureen Waithaka, a pathology specialist and digital innovator, envisions a future where all Kenyan patients have access to quality, affordable pathology resources, having worked in Kenya and Namibia.</p>
+                    <h3>About Dr. Waithaka</h3>
+                    <p>Digital pathology specialist and creative storyteller, bridging the gap between medical expertise and compelling narratives. Dedicated to enhancing healthcare through innovative diagnostic solutions and educational content.</p>
                     
                     <div class="social-links">
                         <a href="https://www.tiktok.com/@path_daddy" target="_blank" class="social-link" title="TikTok">
@@ -774,31 +819,34 @@
                     </div>
                 </div>
 
-                <!-- Site Links -->
+                <!-- Quick Links -->
                 <div class="footer-section">
-                    <h3>Site Links</h3>
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#creative-work">Creative Work</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#creative-work">Creative Work</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
+                <!-- Services -->
                 <div class="footer-section">
-                    <h3>Newsletter</h3>
-                    <p>Stay updated with the latest insights in digital pathology and medical innovation.</p>
-                    <div class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Your Email Address">
-                        <button class="newsletter-btn">Subscribe</button>
-                    </div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Digital Pathology</a></li>
+                        <li><a href="#">Medical Consultation</a></li>
+                        <li><a href="#">Content Creation</a></li>
+                        <li><a href="#">Educational Videos</a></li>
+                        <li><a href="#">Documentary Production</a></li>
+                    </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Dr. Maureen Waithaka. All rights reserved. | Designed with care in Nairobi, Kenya 🇰🇪</p>
+                <p>&copy; 2025 Dr. Waithaka. All rights reserved. | Designed with care in Nairobi, Kenya 🇰🇪</p>
             </div>
         </div>
     </footer>
@@ -839,17 +887,72 @@
             mobileMenu.classList.toggle('active');
         }
 
-        // Newsletter form submission
-        document.querySelector('.newsletter-btn').addEventListener('click', function() {
-            const emailInput = document.querySelector('.newsletter-input');
-            const email = emailInput.value.trim();
-            
-            if (email && email.includes('@')) {
-                alert('Thank you for subscribing to our newsletter!');
-                emailInput.value = '';
-            } else {
-                alert('Please enter a valid email address.');
-            }
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            const searchInput = document.getElementById('searchInput');
+            const faqItems = document.querySelectorAll('.faq-item');
+            const noResults = document.querySelector('.no-results');
+
+            // Toggle accordion functionality
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = question.classList.contains('active');
+
+                    // Close all other accordions
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('active');
+                    });
+
+                    // Toggle current accordion
+                    if (!isActive) {
+                        question.classList.add('active');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                faqItems.forEach(item => {
+                    const questionText = item.querySelector('.faq-question span').textContent.toLowerCase();
+                    const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+                    if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                        // Close accordion if hidden
+                        const question = item.querySelector('.faq-question');
+                        const answer = item.querySelector('.faq-answer');
+                        question.classList.remove('active');
+                        answer.classList.remove('active');
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0 && searchTerm !== '') {
+                    noResults.classList.add('show');
+                } else {
+                    noResults.classList.remove('show');
+                }
+            });
+
+            // Allow keyboard navigation
+            faqQuestions.forEach(question => {
+                question.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
         });
 
         // Smooth scrolling for navigation links
